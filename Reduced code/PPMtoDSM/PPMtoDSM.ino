@@ -6,8 +6,8 @@
 #define MAX_DSM2_CHANNELS  6   // Max number of DSM Channels transmitted
 #define DSM2_HEADER_LEN 2      // DSM2 Protocol header lenght
 #define BIND_PIN 4             // Pin used to bind
-#define PPM_OK_LED 13          // Pin used for PPM Ok signal LED
-#define BINDING_LED 11         // Pin used for Binding in process LED
+#define PPM_OK_LED 6          // Pin used for PPM Ok signal LED
+#define BINDING_LED 5         // Pin used for Binding in process LED
 
 byte header[DSM2_HEADER_LEN];
 byte dsmchannel[MAX_DSM2_CHANNELS*2]={0x00,0xaa,0x05,0xff,0x09,0xff,0x0d,0xff,0x13,0x54,0x14,0xaa};
@@ -64,7 +64,8 @@ void loop()
   }
   else {
     int idx,pulse;
-    int chanmap[]={3,1,2,4,5,6};  //Channel Mapping Table
+    int chanmap[]={3,2,1,4,5,6};  //Channel Mapping Table Sanwa
+    //int chanmap[]={6,2,3,4,5,1};  //Channel Mapping Table Graupner MX-16
 
     for ( int i=0; i<MAX_DSM2_CHANNELS; i++) {
       idx=(i*2);
@@ -96,7 +97,8 @@ void send_dsm2(){
   #ifdef DEBUG
     delay(2000);
   #else
-    delay(20);
+    delay(20); // Pulsing Sanwa
+    //delay(18); // Pulsing MX-16
   #endif
 }
 
