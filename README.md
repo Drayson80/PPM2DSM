@@ -5,3 +5,7 @@ Clone from different files found at
 https://www.rc-heli-fan.org/
 to make my Sanwa RDS800 speak DSM...
 All credits to the guys there as I´m just using it...
+
+additional source: 
+https://www.rcgroups.com/forums/showthread.php?1458563-Poor-man-s-Spectrum-DM8-module#post18550076
+https://www.rcgroups.com/forums/showthread.php?721024-Build-your-own-DSM2-transmitter-module-(its-working!)
